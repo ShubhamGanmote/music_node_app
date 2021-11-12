@@ -1,0 +1,58 @@
+.song-wrapper {
+  margin: 4rem 1rem 1rem 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.album-image {
+  width: 300px;
+  height: 300px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.album-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details {
+  margin-left: 16px;
+}
+
+.song-name {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.song-album {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.song-singers {
+  margin-top: 0.7rem;
+}
+
+.song-date {
+  margin-top: 0.3rem;
+  color: #cccccc;
+}
+
+.play-button {
+  margin: 1rem 0;
+}
+
+button {
+  background: red;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
