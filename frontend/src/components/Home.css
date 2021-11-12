@@ -6,6 +6,93 @@
   align-items: center;
 }
 
-.home-wrapper {
-  margin: 1rem;
+.wrapper {
+  margin: 3rem 1rem 1rem 1rem;
+  overflow-y: hidden;
+}
+
+.list-header-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #cccccc;
+  text-align: left;
+}
+
+.list-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid #cccccc36;
+  text-align: left;
+}
+
+.slno {
+  width: 4rem;
+  min-width: 4rem;
+  max-width: 4rem;
+  text-align: left;
+}
+
+.name {
+  width: 25rem;
+  min-width: 25rem;
+  max-width: 25rem;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.name > span {
+  font-weight: bold;
+}
+
+.album {
+  width: 10rem;
+  min-width: 10rem;
+  max-width: 10rem;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.singers {
+  width: 25rem;
+  min-width: 25rem;
+  max-width: 25rem;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.play-icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.date {
+  width: 10rem;
+  min-width: 10rem;
+  max-width: 10rem;
+  margin-right: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.actions > a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #ffffff;
 }

@@ -1,0 +1,25 @@
+.header-wrapper {
+  width: 100vw;
+  max-height: 80px;
+  min-height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ffffff;
+  padding: 0 16px;
+}
+
+.app-name > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.link-wrapper > a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.link-wrapper > a:last-child {
+  margin-right: 0;
+}

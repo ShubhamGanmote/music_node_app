@@ -1,3 +1,5 @@
+const path = require('path');
+
 const Music = require('../model/music');
 
 const addMusic = async (req, res, next) => {
@@ -21,7 +23,7 @@ const addMusic = async (req, res, next) => {
 };
 
 const uploadSong = async (req, res, next) => {
-  const path = req.file.path.replaceAll('\\', '/');
+  const path = req.file.path.replace(/\\/g, '/');
 
   res.send({
     path: path,
@@ -107,4 +109,27 @@ const deleteSong = async (req, res, next) => {
   res.send({ message: 'Deleted Successfully' });
 }
 
-module.exports = { addMusic, uploadSong, getSongs, getSongById, updateSongDetails, deleteSong };
+const sendSongFile = async (req, res, next) => {
+  const { id } = req.params;
+
+  if (!id) {
+    return res.send('Please send the id of the song');
+  }
+
+  let song;
+
+  try {
+    song = await Music.findById(id);
+  } catch (err) {
+    return res.send(err);
+  }
+
+  if (!song) {
+    return res.send('No song found');
+  }
+
+  const resolvedPath = path.resolve(song.song);
+  res.sendFile(resolvedPath);
+}
+
+module.exports = { addMusic, uploadSong, getSongs, getSongById, updateSongDetails, deleteSong, sendSongFile };
